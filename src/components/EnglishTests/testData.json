@@ -1,0 +1,41 @@
+[
+  {
+    "unit": 1,
+    "title": "Unit 1: Present Continuous",
+    "details": [
+      {
+        "id": 1,
+        "title": "1.1 Fill in the blanks with the correct form of verbs",
+        "instructions": "come, get, happen, look, make, start, try, work, stay",
+        "questions": [
+          {
+            "text": "\"You're working hard today.\" \"Yes, I have a lot to do.\"",
+            "answer": "working"
+          },
+          {
+            "text": "I _____ for Christine. Do you know where she is?",
+            "answer": "am looking"
+          },
+          {
+            "text": "It _____ dark. Shall I turn on the light?",
+            "answer": "is getting"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "1.2 Complete the sentences with appropriate words",
+        "questions": [
+          {
+            "text": "Why _____ at me like that? What's the matter?",
+            "answer": "are you looking"
+          },
+          {
+            "text": "Is she? What _____ ?",
+            "answer": "happened"
+          }
+        ]
+      }
+    ]
+  }
+]
