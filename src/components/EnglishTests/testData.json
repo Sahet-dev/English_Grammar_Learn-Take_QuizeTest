@@ -37,5 +37,1095 @@
         ]
       }
     ]
+  },
+  {
+    "unit": 2,
+    "title": "Unit 1: Present Continuous",
+    "details": [
+      {
+        "id": 1,
+        "title": "1.1 Fill in the blanks with the correct form of verbs",
+        "instructions": "come, get, happen, look, make, start, try, work, stay",
+        "questions": [
+          {
+            "text": "Ann speaks German very well.",
+            "answer": "speaks"
+          },
+          {
+            "text": "I never _____ coffee.",
+            "answer": "drink"
+          },
+          {
+            "text": "The swimming pool _____ at 9 o'clock and closes at 18.30 every day.",
+            "answer": "opens"
+          },
+          {
+            "text": "Bad driving _____ many accidents.",
+            "answer": "causes"
+          },
+          {
+            "text": "My parents _____ in a very small flat.",
+            "answer": "live"
+          },
+          {
+            "text": "The Olympic Games _____ every four years.",
+            "answer": "take place"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "1.2 Fill in the blanks with the correct verb form",
+        "questions": [
+          {
+            "text": "Jane doesn't drink (not/drink) tea very often.",
+            "answer": "drink"
+          },
+          {
+            "text": "What time _____ (the banks/close) in Britain?",
+            "answer": "do the banks close"
+          },
+          {
+            "text": "\"Where _____ from?\" \"He's Scottish.\"",
+            "answer": "is he"
+          },
+          {
+            "text": "\"What _____ (you/do)? I’m an electrical engineer.\"",
+            "answer": "do you do"
+          },
+          {
+            "text": "It _____ (take) me an hour to get to work. How long _____ (it/take) you?",
+            "answer": "takes, does it take"
+          },
+          {
+            "text": "I _____ (play) the piano but I _____ (not/play) very well.",
+            "answer": "play, don't play"
+          },
+          {
+            "text": "I don't understand this sentence. What _____ (this word/mean)?",
+            "answer": "does this word mean"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "1.3 Complete the sentences with the correct verbs",
+        "questions": [
+          {
+            "text": "The sun _____ in the east.",
+            "answer": "rises"
+          },
+          {
+            "text": "Bees _____ honey.",
+            "answer": "make"
+          },
+          {
+            "text": "Vegetarians _____ meat.",
+            "answer": "don't eat"
+          },
+          {
+            "text": "An atheist _____ in God.",
+            "answer": "doesn't believe"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "1.4 Ask questions based on the information given",
+        "questions": [
+          {
+            "text": "How often do you play tennis?",
+            "answer": "How often do you play tennis?"
+          },
+          {
+            "text": "How often does your sister play tennis?",
+            "answer": "How often does your sister play tennis?"
+          },
+          {
+            "text": "What newspaper does Liz read?",
+            "answer": "What newspaper does Liz read?"
+          },
+          {
+            "text": "What does your sister do?",
+            "answer": "What does your sister do?"
+          },
+          {
+            "text": "How often does Liz go to the cinema?",
+            "answer": "How often does Liz go to the cinema?"
+          },
+          {
+            "text": "Where does Liz's mother live?",
+            "answer": "Where does Liz's mother live?"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "1.5 Complete the sentences with the correct form of the verbs",
+        "questions": [
+          {
+            "text": "It's a nice day. I _____ we go out for a walk.",
+            "answer": "suggest"
+          },
+          {
+            "text": "I won't tell anybody what you said. I _____ it.",
+            "answer": "promise"
+          },
+          {
+            "text": "(in a restaurant) You must let me pay for the meal. I _____ it.",
+            "answer": "insist"
+          },
+          {
+            "text": "I _____ for what I said about you. It wasn’t true and I shouldn't have said it.",
+            "answer": "apologise"
+          },
+          {
+            "text": "The new restaurant in Hill Street is very good. I _____ it.",
+            "answer": "recommend"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "unit": 3,
+    "title": "Unit 3: Present Simple vs Present Continuous",
+    "details": [
+      {
+        "id": 1,
+        "title": "3.1 Anyklaň dogry ýa-da nädogrydygy",
+        "instructions": "Determine whether the sentences are correct or incorrect. Rewrite incorrect sentences correctly.",
+        "questions": [
+          {
+            "text": "1. Water boils at 100 degrees Celsius.",
+            "answer": "DOGRY"
+          },
+          {
+            "text": "2. The water boils. Can you turn it off?",
+            "answer": "NÄDOGRY: is boiling"
+          },
+          {
+            "text": "3. Look! That man tries to open the door of your car.",
+            "answer": "NÄDOGRY: is trying"
+          },
+          {
+            "text": "4. Can you hear those people? What do they talk about?",
+            "answer": "NÄDOGRY: are they talking"
+          },
+          {
+            "text": "5. The moon goes round the earth.",
+            "answer": "DOGRY"
+          },
+          {
+            "text": "6. I must go now. It gets late.",
+            "answer": "DOGRY"
+          },
+          {
+            "text": "7. I usually go to work by car.",
+            "answer": "DOGRY"
+          },
+          {
+            "text": "8. 'Hurry up! It's time to leave.' 'OK, I come.'",
+            "answer": "NÄDOGRY: am coming"
+          },
+          {
+            "text": "9. I hear you've got a new job. How do you get on?",
+            "answer": "DOGRY"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "3.2 Dogry görnüşde ýerleşdiriň",
+        "instructions": "Complete the sentences with the correct form of the verb in Present Simple or Present Continuous.",
+        "questions": [
+          {
+            "text": "1. Let's go out. It _____ (not/rain) now.",
+            "answer": "isn't raining"
+          },
+          {
+            "text": "2. Julia is very good at languages. She _____ (speak) four languages very well.",
+            "answer": "speaks"
+          },
+          {
+            "text": "3. Hurry up! Everybody _____ (wait) for you.",
+            "answer": "is waiting"
+          },
+          {
+            "text": "4. _____ (you/listen) to the radio? 'No, you can turn it off.'",
+            "answer": "Are you listening"
+          },
+          {
+            "text": "5. _____ (you/listen) to the radio every day? 'No, just occasionally.'",
+            "answer": "Do you listen"
+          },
+          {
+            "text": "6. The river Nile _____ (flow) into the Mediterranean.",
+            "answer": "flows"
+          },
+          {
+            "text": "7. Look at the river. It _____ (flow) very fast today - much faster than usual.",
+            "answer": "is flowing"
+          },
+          {
+            "text": "8. We usually _____ (grow) vegetables in our garden but this year we _____ (not/grow) any.",
+            "answer": "grow, aren't growing"
+          },
+          {
+            "text": "9. How is your English? Not bad. It _____ (improve) slowly.",
+            "answer": "is improving"
+          },
+          {
+            "text": "10. Ron is in London at the moment. He _____ (stay) at the Park Hotel. He always stays there when he’s in London.",
+            "answer": "is staying"
+          },
+          {
+            "text": "11. Can we stop walking soon? I _____ (start) to feel tired.",
+            "answer": "am starting"
+          },
+          {
+            "text": "12. 'Can you drive?' 'I _____ (learn). My father _____ (teach) me.'",
+            "answer": "am learning, is teaching"
+          },
+          {
+            "text": "13. Normally I _____ (finish) work at 5:00, but this week I _____ (work) until 6:00 to earn a bit more money.",
+            "answer": "finish, am working"
+          },
+          {
+            "text": "14. My parents _____ (live) in Bristol. They were born there and have never lived anywhere else. Where _____ (your parents/live)?",
+            "answer": "live, do your parents live"
+          },
+          {
+            "text": "15. Sonia _____ (look) for a place to live. She _____ (stay) with her sister until she finds somewhere.",
+            "answer": "is looking, is staying"
+          },
+          {
+            "text": "16. 'What _____ (your father/do)?' 'He's an architect but he _____ (not/work) at the moment.'",
+            "answer": "does your father do, isn't working"
+          },
+          {
+            "text": "17. (at party) Usually I _____ (enjoy) parties but I _____ (not/enjoy) this one very much.",
+            "answer": "enjoy, am not enjoying"
+          },
+          {
+            "text": "18. The train is never late. It _____ (always/leave) on time.",
+            "answer": "always leaves"
+          },
+          {
+            "text": "19. Jim is very untidy. He _____ (always/leave) his things all over the place.",
+            "answer": "is always leaving"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "3.3 Always bilen -ing ulanyň",
+        "instructions": "Complete B's responses using 'always' and the present continuous.",
+        "questions": [
+          {
+            "text": "1. A: I'm afraid I've lost my key again. B: Not again! _____",
+            "answer": "You're always losing your key"
+          },
+          {
+            "text": "2. A: The car has broken down again. B: That car is useless! It _____",
+            "answer": "is always breaking down"
+          },
+          {
+            "text": "3. A: Look! You've made the same mistake again. B: Oh no, not again! _____",
+            "answer": "You're always making the same mistake"
+          },
+          {
+            "text": "4. A: Oh, I've left the lights on again. B: Typical! You _____",
+            "answer": "are always leaving the lights on"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "unit": 4,
+    "title": "4.1 İşlikleriň dogry ýa-da nädogrydygyny anyklaň",
+    "details": [
+      {
+        "id": 1,
+        "title": "Dogry/Nädogry",
+        "questions": [
+          {
+            "text": "I'm seeing the manager tomorrow morning.",
+            "answer": "True"
+          },
+          {
+            "text": "I'm feeling hungry. Is there anything to eat?",
+            "answer": "True"
+          },
+          {
+            "text": "Are you believing in God?",
+            "answer": "False. Corrected: Do you believe in God?"
+          },
+          {
+            "text": "This sauce is great. It's tasting really good.",
+            "answer": "False. Corrected: This sauce is great. It tastes really good."
+          },
+          {
+            "text": "I'm thinking this is your key. Am I right?",
+            "answer": "False. Corrected: I think this is your key. Am I right?"
+          },
+          {
+            "id": 2,
+            "title": "Sözlem düzmek",
+            "questions": [
+              {
+                "text": "(you/ not seem/ very happy today)",
+                "answer": "You don't seem very happy today."
+              },
+              {
+                "text": "(what / you do)",
+                "answer": "What are you doing?"
+              },
+              {
+                "text": "Be quiet! (I/ think)",
+                "answer": "Be quiet! I'm thinking."
+              },
+              {
+                "text": "(who/ this umbrella / belong to?)",
+                "answer": "Who does this umbrella belong to?"
+              },
+              {
+                "text": "(the dinner/ smell good)",
+                "answer": "The dinner smells good."
+              },
+              {
+                "text": "Excuse me. (anybody/ sit / there?)",
+                "answer": "Excuse me. Is anybody sitting there?"
+              },
+              {
+                "text": "(these gloves/ not / fit/ me)",
+                "answer": "These gloves don't fit me."
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Present Continuous ýa-da Present Simple",
+            "questions": [
+              {
+                "text": "Are you hungry? Do you want something to eat? (you /want)",
+                "answer": "Do you want"
+              },
+              {
+                "text": "Jill is interested in politics but she _____ to a political party. (not/belong)",
+                "answer": "does not belong"
+              },
+              {
+                "text": "Don't put the dictionary away. I _____ it. (use)",
+                "answer": "am using"
+              },
+              {
+                "text": "Don't put the dictionary away. I _____ it. (need)",
+                "answer": "need"
+              },
+              {
+                "text": "Who is that man? What _____ ? (he/want)",
+                "answer": "does he want"
+              },
+              {
+                "text": "Who is that man? Why _____ at us? (he/look)",
+                "answer": "is he looking"
+              },
+              {
+                "text": "George says he's 80 years old but nobody _____ him. (believe)",
+                "answer": "believes"
+              },
+              {
+                "text": "She told me her name but I _____ it now. (not/remember)",
+                "answer": "don't remember"
+              },
+              {
+                "text": "I _____ of selling my car. (think) Would you be interested in buying it?",
+                "answer": "am thinking"
+              },
+              {
+                "text": "I _____ you should sell your car. (think) You _____ it very often (not/use)",
+                "answer": "think; don't use"
+              },
+              {
+                "text": "I used to drink a lot of coffee but these days I _____ tea. (prefer)",
+                "answer": "prefer"
+              },
+              {
+                "text": "Air _____ mainly of nitrogen and oxygen. (consist)",
+                "answer": "consists"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Am/Is/Are we Present Simple ýa-da Present Continuous",
+            "questions": [
+              {
+                "text": "I can't understand why he's being so selfish. He isn't usually like that.",
+                "answer": "Correct as is."
+              },
+              {
+                "text": "Jack _____ very nice to me at the moment. I wonder why.",
+                "answer": "is being"
+              },
+              {
+                "text": "You'll like Jill when you meet her. She _____ very nice.",
+                "answer": "is"
+              },
+              {
+                "text": "Normally you are very sensible, so why _____ so silly about this matter?",
+                "answer": "are you being"
+              },
+              {
+                "text": "Why isn't Sarah at work today? _____ ill?",
+                "answer": "Is she"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+      "unit": 5,
+      "title": "Unit 5: Past Simple Practice",
+      "details": [
+        {
+          "id": 1,
+          "title": "5.1 Loraning adaty iş güni barada teksti oka",
+          "instructions": "Düýn Şeron üçin adaty iş güni boldy. Düýn näme edenini we näme etmedigi ýazyň.",
+          "questions": [
+            {
+              "text": "1. She got up at 7 o'clock.",
+              "answer": "got up"
+            },
+            {
+              "text": "2. She _____ a big breakfast.",
+              "answer": "had"
+            },
+            {
+              "text": "3. She _____ to work.",
+              "answer": "walked"
+            },
+            {
+              "text": "4. It _____ to get to work.",
+              "answer": "took her half an hour"
+            },
+            {
+              "text": "5. _____ at 8.45.",
+              "answer": "She started work"
+            },
+            {
+              "text": "6. _____ lunch.",
+              "answer": "She never had"
+            },
+            {
+              "text": "7. _____ at 5 o’clock.",
+              "answer": "She finished work"
+            },
+            {
+              "text": "8. _____ tired when _____ home.",
+              "answer": "She was tired when she got home"
+            },
+            {
+              "text": "9. _____ a meal yesterday evening.",
+              "answer": "She cooked"
+            },
+            {
+              "text": "10. _____ out yesterday evening.",
+              "answer": "She didn't go"
+            },
+            {
+              "text": "11. _____ at 11 o' clock.",
+              "answer": "She went to bed"
+            },
+            {
+              "text": "12. _____ well last night.",
+              "answer": "She slept"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "5.2 Aşakdaky iňlikleri ulanyp sözlemleri dolduryň",
+          "instructions": "buy, catch, cost, drink, fall, hurt, sell, spend, teach, throw, win, write",
+          "questions": [
+            {
+              "text": "1. Mozart _____ more than 600 pieces of music.",
+              "answer": "wrote"
+            },
+            {
+              "text": "2. \"How did you learn to drive?\" \"My Father. _____ me.\"",
+              "answer": "taught"
+            },
+            {
+              "text": "3. We couldn't afford to keep our car, so we _____ it.",
+              "answer": "sold"
+            },
+            {
+              "text": "4. I was very thirsty. I _____ the water very quickly.",
+              "answer": "drank"
+            },
+            {
+              "text": "5. Paul and I played tennis yesterday. He's much better than me, so he _____ easily.",
+              "answer": "won"
+            },
+            {
+              "text": "6. Don _____ down the stairs this morning and _____ his leg.",
+              "answer": "fell, hurt"
+            },
+            {
+              "text": "7. Jim _____ the ball to Sue, who _____ it.",
+              "answer": "threw, caught"
+            },
+            {
+              "text": "8. Ann _____ a lot of money yesterday. She _____ a dress which _____ $100.",
+              "answer": "spent, bought, cost"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "5.3 Dostuňyza dynç alyş soraglary",
+          "instructions": "Soraglary dolduryň:",
+          "questions": [
+            {
+              "text": "1. (where/go?)",
+              "answer": "Where did you go?"
+            },
+            {
+              "text": "2. (go alone?)",
+              "answer": "Did you go alone?"
+            },
+            {
+              "text": "3. (food/good?)",
+              "answer": "Was the food good?"
+            },
+            {
+              "text": "4. (how long/stay there?)",
+              "answer": "How long did you stay there?"
+            },
+            {
+              "text": "5. (stay/at a hotel?)",
+              "answer": "Did you stay at a hotel?"
+            },
+            {
+              "text": "6. (how/travel?)",
+              "answer": "How did you travel?"
+            },
+            {
+              "text": "7. (the weather / fine?)",
+              "answer": "Was the weather fine?"
+            },
+            {
+              "text": "8. (what/ do in the evenings?)",
+              "answer": "What did you do in the evenings?"
+            },
+            {
+              "text": "9. (meet anybody interesting?)",
+              "answer": "Did you meet anybody interesting?"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "5.4 Işlikleri dogry ulanyp gürrüňleri dolduryň",
+          "questions": [
+            {
+              "text": "1. It was warm, so I _____ off my coat. (take)",
+              "answer": "took"
+            },
+            {
+              "text": "2. The film wasn't very good. I _____ it very much. (enjoy)",
+              "answer": "didn't enjoy"
+            },
+            {
+              "text": "3. I knew Sarah was very busy, so I _____ her. (disturb)",
+              "answer": "didn't disturb"
+            },
+            {
+              "text": "4. I was very tired, so I _____ to bed early. (go)",
+              "answer": "went"
+            },
+            {
+              "text": "5. The bed was very uncomfortable. I _____ very well. (sleep)",
+              "answer": "didn't sleep"
+            },
+            {
+              "text": "6. Sue wasn't hungry, so she _____ anything. (eat)",
+              "answer": "didn't eat"
+            },
+            {
+              "text": "7. We went to Kate's house but she _____ at home. (be)",
+              "answer": "wasn't"
+            },
+            {
+              "text": "8. It was a funny situation but nobody _____ (laugh)",
+              "answer": "laughed"
+            },
+            {
+              "text": "9. The window was open and a bird _____ into the room. (fly)",
+              "answer": "flew"
+            },
+            {
+              "text": "10. The hotel wasn't very expensive. It _____ very much. (cost)",
+              "answer": "didn't cost"
+            },
+            {
+              "text": "11. I was in a hurry, so I _____ time to phone you. (have)",
+              "answer": "didn't have"
+            },
+            {
+              "text": "12. It was hard work carrying bags. They _____ very heavy. (be)",
+              "answer": "were"
+            }
+          ]
+        }
+      ]
+    },
+  {
+    "unit": 6,
+    "title": "Unit 6: Past Continuous",
+    "details": [
+      {
+        "id": 1,
+        "title": "6.1 Aşakdaky görkezlen pursatlarda näme edýädiňiz?",
+        "instructions": "Past Continuous'-y hemme wagt üçin ulanmak zerur däl.",
+        "examples": [
+          {
+            "time": "at 8 o'clock yesterday evening",
+            "text": "I was having dinner with some friends"
+          },
+          {
+            "time": "at 5 o'clock last Saturday",
+            "text": "I was on a train on my way to London"
+          }
+        ],
+        "questions": [
+          {
+            "time": "at 10.15 yesterday morning",
+            "text": ""
+          },
+          {
+            "time": "at 4.30 this morning",
+            "text": ""
+          },
+          {
+            "time": "at 7.45 yesterday evening",
+            "text": ""
+          },
+          {
+            "time": "half an hour ago",
+            "text": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "6.2 Özüňpikirlenip aşakdaky sözlemlere gerekli işlikleri goýup ýazyň.",
+        "instructions": "Past Continuous '-y ulanmaly.",
+        "questions": [
+          {
+            "text": "Tom burnt his hand while he was cooking the dinner.",
+            "answer": "was cooking"
+          },
+          {
+            "text": "The doorbell rang while I _____.",
+            "answer": ""
+          },
+          {
+            "text": "We saw an accident while we _____.",
+            "answer": ""
+          },
+          {
+            "text": "Mary fell asleep while she _____.",
+            "answer": ""
+          },
+          {
+            "text": "The television was on but nobody _____.",
+            "answer": ""
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "6.3 Işlikeri dogry formada goýuň (past continuous ýa-da past simple).",
+        "questions": [
+          {
+            "text": "I saw Sue in town yesterday, but she _____ me.",
+            "answer": "did not see"
+          },
+          {
+            "text": "She _____ the other way.",
+            "answer": "was looking"
+          },
+          {
+            "text": "I _____ Tom and Jane at the airport a few weeks ago.",
+            "answer": "met"
+          },
+          {
+            "text": "They _____ to Paris and I _____ to Rome.",
+            "answer": ["were going", "was going"]
+          },
+          {
+            "text": "We _____ a chat while we _____ for our flights.",
+            "answer": ["had", "were waiting"]
+          },
+          {
+            "text": "I _____ home yesterday when a man _____ out into the road in front of me.",
+            "answer": ["was cycling", "stepped"]
+          },
+          {
+            "text": "I _____ quite fast, but luckily I _____ to stop in time and _____ him.",
+            "answer": ["was going", "managed", "did not hit"]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "6.4 Işlikeri dogry formada goýuň (past continuous ýa-da past simple).",
+        "questions": [
+          {
+            "text": "Jane _____ for me when I _____.",
+            "answer": ["was waiting", "arrived"]
+          },
+          {
+            "text": "\"What _____ this time yesterday?\" \"I was asleep.\"",
+            "answer": "were you doing"
+          },
+          {
+            "text": "_____ out last night? \"No, I was too tired.\"",
+            "answer": "Did you go"
+          },
+          {
+            "text": "\"Was Carol at the party last night?\" \"Yes, she _____ a really nice dress.\"",
+            "answer": "was wearing"
+          },
+          {
+            "text": "How fast _____ when the accident _____?",
+            "answer": ["were you driving", "happened"]
+          },
+          {
+            "text": "John _____ a photograph of me while I _____.",
+            "answer": ["took", "was not looking"]
+          },
+          {
+            "text": "We were in a very difficult position. We _____.",
+            "answer": "did not know"
+          },
+          {
+            "text": "I haven't seen Alan for ages. When I last _____ him, he _____ to find a job in London.",
+            "answer": ["saw", "was trying"]
+          },
+          {
+            "text": "I _____ along the street when suddenly I _____ footsteps behind me.",
+            "answer": ["was walking", "heard"]
+          },
+          {
+            "text": "Somebody _____ me. I was frightened and _____ to run.",
+            "answer": ["was following", "started"]
+          },
+          {
+            "text": "When I was young, I _____ to be a bus driver.",
+            "answer": "wanted"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "unit": 7,
+    "title": "Unit 7: Present Perfect",
+    "details": [
+      {
+        "id": 1,
+        "title": "7.1 Hatda özüňiz we beýleki adamlar barada täzelikler ýazmak",
+        "instructions": "Present perfect'-i ulanyp, sözlemleri dolulygyna ýazyň.",
+        "questions": [
+          {
+            "text": "1. I / buy / a new car.",
+            "answer": "I’ve bought a new car."
+          },
+          {
+            "text": "2. my father / start / a new job.",
+            "answer": "My father has started a new job."
+          },
+          {
+            "text": "3. I / give up / smoking.",
+            "answer": "I’ve given up smoking."
+          },
+          {
+            "text": "4. Charles and Sarah / go / to Brazil.",
+            "answer": "Charles and Sarah have gone to Brazil."
+          },
+          {
+            "text": "5. Suzanne / have / a baby.",
+            "answer": "Suzanne has had a baby."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "7.2 Pursatlaryň okaň we gürrüňler ýazyň",
+        "instructions": "Given promptsdan peýdalanyp Present perfect bilen sözlemleri ýaz.",
+        "questions": [
+          {
+            "text": "1. Mike is looking for his key. He can't find it.",
+            "answer": "He has lost his key."
+          },
+          {
+            "text": "2. Margaret can't walk and her leg is in plaster.",
+            "answer": "She has broken her leg."
+          },
+          {
+            "text": "3. Maria's English wasn't very good. Now it is much better.",
+            "answer": "Her English has improved."
+          },
+          {
+            "text": "4. Tim didn't have a beard last month. Now he has a beard.",
+            "answer": "He has grown a beard."
+          },
+          {
+            "text": "5. This morning I was expecting a letter. Now I have it.",
+            "answer": "The letter has arrived."
+          },
+          {
+            "text": "6. Last week the bus fare was 80 pence. Now it is 90.",
+            "answer": "The bus fare has gone up."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "7.3 Ýaý içinde berlenleri dogry görnüşde ulanyp ýazyň",
+        "instructions": "Sözlemleri dolulygyna ýazyň.",
+        "questions": [
+          {
+            "text": "1. Would you like something to eat?",
+            "answer": "No, thanks. I've just had lunch."
+          },
+          {
+            "text": "2. Do you know where Julia is?",
+            "answer": "Yes, I have just seen her."
+          },
+          {
+            "text": "3. What time is David leaving?",
+            "answer": "He has already left."
+          },
+          {
+            "text": "4. What's in the newspaper today?",
+            "answer": "I don't know. I haven't read it yet."
+          },
+          {
+            "text": "5. Is Ann coming to the cinema with us?",
+            "answer": "No, she has already seen the film."
+          },
+          {
+            "text": "6. Are your friends here yet?",
+            "answer": "Yes, they have just arrived."
+          },
+          {
+            "text": "7. What does Tim think about your plan?",
+            "answer": "I haven't told him yet."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "7.4 just, already ýa-da yet ulanyp sözlemleri dolduryň",
+        "instructions": "Appropriate sözüni ulanyp, doly ýaz.",
+        "questions": [
+          {
+            "text": "1. After lunch you go to see a friend at her house. She says \"Would you like something to eat?\"",
+            "answer": "No, thank you. I've just had lunch."
+          },
+          {
+            "text": "2. Joe goes out. Five minutes later, the phone rings and the caller says \"Can I speak to Joe?\"",
+            "answer": "I'm afraid he's just gone out."
+          },
+          {
+            "text": "3. You are eating in a restaurant. The waiter thinks you have finished and starts to take your plate away.",
+            "answer": "Wait a minute! I haven't finished yet."
+          },
+          {
+            "text": "4. You are going to a restaurant this evening. You phone to reserve a table. Later your friend says \"Shall I phone to reserve a table?\"",
+            "answer": "No, I've already done it."
+          },
+          {
+            "text": "5. You know that a friend of yours is looking for a job. Perhaps she has been successful. Ask her.",
+            "answer": "Have you found a job yet?"
+          },
+          {
+            "text": "6. Ann went to the bank, but a few minutes ago she returned. Somebody asks \"Is Ann still at the bank?\"",
+            "answer": "No, she's just come back."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "7.5 Been ýa-da gone ulanyň",
+        "instructions": "Been we gone ulanyp dogry görnüşde ýazyň.",
+        "questions": [
+          {
+            "text": "1. Jim is on holiday.",
+            "answer": "He's gone to Italy."
+          },
+          {
+            "text": "2. Hello! I've just bought lots of things.",
+            "answer": "I've been to the shops."
+          },
+          {
+            "text": "3. Alice isn't here at the moment.",
+            "answer": "She's gone to the shop to get a newspaper."
+          },
+          {
+            "text": "4. Tom has gone out.",
+            "answer": "He’ll be back in about an hour."
+          },
+          {
+            "text": "5. Are you going to the bank?",
+            "answer": "No, I've already been to the bank."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "unit": 8,
+    "title": "Unit 8: Present Perfect Questions and Responses",
+    "details": [
+      {
+        "id": 1,
+        "title": "8.1 Write questions about someone's experiences",
+        "instructions": "Use the words in parentheses to form questions.",
+        "questions": [
+          {
+            "text": "(ever/ ride / horse?)",
+            "answer": "Have you ever ridden a horse?"
+          },
+          {
+            "text": "(ever/ be / California?)",
+            "answer": "Have you ever been to California?"
+          },
+          {
+            "text": "(ever/ run / marathon?)",
+            "answer": "Have you ever run a marathon?"
+          },
+          {
+            "text": "(ever/ speak / famous person?)",
+            "answer": "Have you ever spoken to a famous person?"
+          },
+          {
+            "text": "(always / live / in this town?)",
+            "answer": "Have you always lived in this town?"
+          },
+          {
+            "text": "(most beautiful place/ ever/ visit?)",
+            "answer": "What is the most beautiful place you have ever visited?"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "8.2 Complete the responses using appropriate verbs",
+        "instructions": "Fill in the blanks with the correct verb from the list: be, meet, see, eat, play, happen, try, have, read.",
+        "questions": [
+          {
+            "text": "A - What's George's sister like? B - I've no idea. I’ve never _____ her.",
+            "answer": "met"
+          },
+          {
+            "text": "A - How is Amy these days? B - I don't know. I _____ her recently.",
+            "answer": "haven't seen"
+          },
+          {
+            "text": "A - Are you hungry? B - Yes. I _____ much today.",
+            "answer": "haven't eaten"
+          },
+          {
+            "text": "A - Can you play chess? B - Yes, but I _____ for ages.",
+            "answer": "haven't played"
+          },
+          {
+            "text": "A - Did you enjoy your holiday? B - Yes, it's the best holiday I _____ for a long time.",
+            "answer": "have had"
+          },
+          {
+            "text": "A - What's that book like? B - I don't know. I _____ it.",
+            "answer": "haven't read"
+          },
+          {
+            "text": "A - Is Brussels an interesting place? B - I’ve no idea. I _____ there.",
+            "answer": "haven't been"
+          },
+          {
+            "text": "A - Mike was late for work again today. B - Again? He _____ every day this week.",
+            "answer": "has been late"
+          },
+          {
+            "text": "A - Do you like caviar? B - I don't know. I _____ it.",
+            "answer": "haven't tried"
+          },
+          {
+            "text": "A - The car broke down again yesterday. B - Not again! That's the second time it _____ this week.",
+            "answer": "has happened"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "8.3 Use 'today', 'this year', 'this month'",
+        "instructions": "Complete the sentences using the correct tense and 'today', 'this year', or similar phrases.",
+        "questions": [
+          {
+            "text": "I saw Tom yesterday but I _____ him today.",
+            "answer": "haven't seen"
+          },
+          {
+            "text": "I read a newspaper yesterday but I _____ today.",
+            "answer": "haven't read one"
+          },
+          {
+            "text": "Last year the company made a profit but this year it _____ .",
+            "answer": "hasn't"
+          },
+          {
+            "text": "Tracy worked hard at school last term but this term she _____ .",
+            "answer": "hasn't worked as hard"
+          },
+          {
+            "text": "It snowed a lot last winter but this winter it _____ .",
+            "answer": "hasn't snowed as much"
+          },
+          {
+            "text": "Our football team won a lot of games last season but this season we _____ .",
+            "answer": "haven't won many games"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "8.4 First-time experiences",
+        "instructions": "Ask and answer questions about first-time experiences using the prompts.",
+        "questions": [
+          {
+            "text": "Jack is driving a car but he's very nervous and not sure what to do. You ask: _____ ? He says: No, this is the first time I've driven a car.",
+            "answer": "Have you driven a car before?"
+          },
+          {
+            "text": "Len is playing tennis. He's not very good and he doesn't know the rules. You ask: _____ ? He says: No, this is the first time I've played tennis.",
+            "answer": "Have you played tennis before?"
+          },
+          {
+            "text": "Sue is riding a horse. She doesn't look very confident or comfortable. You ask: _____ ? She says: No, this is the first time I've ridden a horse.",
+            "answer": "Have you ridden a horse before?"
+          }
+        ]
+      }
+    ]
   }
 ]
+
+

@@ -24,15 +24,10 @@ const routes = [
     props: true,
   },
   {
-    path: '/test-form',
-    name: 'TestForm',
-    component: TestForm
+    path: '/unit/:unitId/questions',
+    name: 'UnitQuestions',
+    component: TestComponent,
   },
-  {
-    path: '/test',
-    name: 'TestComponent',
-    component: TestComponent
-  }
 ]
 
 const router = createRouter({
