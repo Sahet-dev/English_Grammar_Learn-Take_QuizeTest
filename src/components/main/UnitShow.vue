@@ -1,0 +1,97 @@
+<template>
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+    <div
+        v-if="unit"
+        class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-in-out"
+    >
+      <!-- Unit Header -->
+      <div class="relative overflow-hidden bg-blue-600 p-8">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-90"></div>
+        <div class="relative">
+          <span class="inline-block px-3 py-1 text-sm font-medium text-blue-100 bg-blue-500 bg-opacity-50 rounded-full">
+            Learning Material
+          </span>
+          <h2 class="mt-4 text-3xl font-bold text-white">
+            Unit {{ unit.unit }}
+          </h2>
+        </div>
+      </div>
+
+      <!-- Content Container -->
+      <div class="p-8">
+        <div
+            v-for="(detail, index) in unit.details"
+            :key="detail.id"
+            class="mb-12 last:mb-8 transition-all duration-300 ease-in-out hover:translate-x-2"
+        >
+          <!-- Section Title -->
+          <div class="flex items-center space-x-3 mb-4">
+            <span class="flex items-center justify-center w-8 h-8 text-sm font-semibold text-blue-600 bg-blue-50 rounded-full">
+              {{ index + 1 }}
+            </span>
+            <h3 class="text-2xl font-semibold text-gray-800">
+              {{ detail.title }}
+            </h3>
+          </div>
+
+          <!-- Section Content -->
+          <div class="ml-11">
+            <h4 class="text-lg font-medium text-gray-700 mb-3">
+              {{ detail.section }}
+            </h4>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              {{ detail.content }}
+            </p>
+
+            <!-- Example Box -->
+            <div class="bg-gray-50 border-l-4 border-blue-500 rounded-r-lg p-6">
+              <h4 class="font-medium text-gray-800 mb-2">Example:</h4>
+              <p class="text-gray-600 italic">{{ detail.example }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Button -->
+        <div class="mt-12 text-center">
+          <router-link
+              :to="`/unit/${unit.unit}/questions`"
+              class="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transform hover:scale-105 transition-all duration-200"
+          >
+            Open Questions for Unit {{ unit.unit }}
+            <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+              <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const unit = ref(null);
+
+const loadData = async () => {
+  const response = await fetch('/units.json');
+  const data = await response.json();
+  unit.value = data.find((u) => u.unit === parseInt(route.params.id));
+};
+
+onMounted(() => {
+  loadData();
+});
+</script>

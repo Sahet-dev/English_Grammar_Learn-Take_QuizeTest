@@ -18,6 +18,18 @@
           >
             List
           </router-link>
+            <router-link
+              to="/unit/db/list"
+              class="text-white hover:text-yellow-300 transition duration-300 ease-in-out"
+          >
+            List DIRECT From DB
+          </router-link>
+            <router-link
+              to="/login"
+              class="text-white hover:text-yellow-300 transition duration-300 ease-in-out"
+          >
+            Login
+          </router-link>
         </div>
 
         <!-- Mobile Menu Icon (Hamburger) -->
@@ -44,6 +56,12 @@
         >
           List
         </router-link>
+          <router-link
+              to="/login"
+              class="text-white hover:text-yellow-300 transition duration-300 ease-in-out"
+          >
+              Login
+          </router-link>
       </div>
     </nav>
   </header>

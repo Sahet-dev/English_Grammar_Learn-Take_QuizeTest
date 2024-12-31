@@ -28,7 +28,7 @@
 
 <script setup>
 import { reactive } from 'vue';
-import data from '../testData.js';
+import data from '../../testData.js';
 
 const answers = reactive({});
 for (const section of data.questions) {
