@@ -73,51 +73,66 @@
                         </svg>
                     </router-link>
                 </div>
+
                 <!-- Update Button -->
-                <div class="mt-8 text-center">
+                <template v-if="isAuthenticated">
+                    <div class="mt-8 text-center flex grid grid-cols-1 gap-4 items-center">
                     <router-link
                         :to="`/unit/${unit.unit}/edit`"
                         class="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 transform hover:scale-105 transition-all duration-200"
                     >
                         Update Unit {{ unit.unit }}
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-5 5m0 0l-5-5m5 5V6" />
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 13l-5 5m0 0l-5-5m5 5V6"
+                            />
+                        </svg>
+                    </router-link>
+                    <router-link
+                        :to="{ name: 'UpdateQuiz', params: { unitId: unit.unit } }"
+                        class="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 transform hover:scale-105 transition-all duration-200"
+                    >
+                        Update Quiz
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 13l-5 5m0 0l-5-5m5 5V6"
+                            />
                         </svg>
                     </router-link>
                 </div>
+                </template>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-const route = useRoute();
-const unit = ref(null);
+import { useUnitStore } from '@/api/useUnitStore.js'
+import {useAuthStore} from "@/helpers/authStore.js";
 
-const loadData = async () => {
-    try {
-        // Make an API call to fetch the data from the backend
-        const response = await fetch(`http://localhost:8000/api/units/${route.params.id}`);
+const route = useRoute()
+const unitStore = useUnitStore()
+const authStore = useAuthStore();
 
-        if (!response.ok) {
-            throw new Error('Failed to fetch unit data');
-        }
-
-        const data = await response.json();
-        unit.value = data;  // Store the fetched data in `unit`
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-};
-
-onMounted(() => {
-    loadData();
+const isAuthenticated = computed(() => {
+    return authStore.token !== null;
 });
+// On mount, call the store to fetch the single unit by ID
+onMounted(() => {
+    unitStore.fetchUnitById(route.params.id)
+})
+
+const unit = computed(() => unitStore.currentUnit)
 </script>
 
 <style scoped>
-/* Add your custom styles here */
 </style>

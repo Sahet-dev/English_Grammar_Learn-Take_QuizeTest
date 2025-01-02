@@ -5,22 +5,25 @@ import UnitList from "@/components/main/UnitList.vue";
 import UnitShow from "@/components/main/UnitShow.vue";
 import TestComponent from "@/components/EnglishTests/TestComponent.vue";
 import Login from "@/components/main/Login.vue";
+import Registration from "@/components/main/Registration.vue";
 import FromDBUnitList from "@/components/main/FromDBUnitList.vue";
 import UnitShowFromDB from "@/components/main/UnitShowFromDB.vue";
 import UnitUpdate from "@/components/main/UnitUpdate.vue";
+import UpdateQuiz from "@/components/main/UpdateQuiz.vue";
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'FromDBUnitList',
+    component: FromDBUnitList
   },
   {
     path: '/list',
     name: 'List',
     component: UnitList
   },
-    { path: "/login", component: Login },
+  { path: "/login", component: Login },
+  { path: "/register", component: Registration },
   {
     path: '/unit/:id',
     name: 'UnitShow',
@@ -33,15 +36,20 @@ const routes = [
     component: UnitShowFromDB,
     props: true,
   },
+    {
+        path: '/quiz/:unitId',
+        name: 'UpdateQuiz',
+        component: UpdateQuiz
+    },
   {
     path: '/unit/:unitId/questions',
     name: 'UnitQuestions',
     component: TestComponent,
   },
     {
-    path: '/unit/db/list',
-    name: 'FromDBUnitList',
-    component: FromDBUnitList,
+    path: '/insert',
+    name: 'Insert',
+    component:  Home,
   },
     {
         path: '/unit/:id/edit',

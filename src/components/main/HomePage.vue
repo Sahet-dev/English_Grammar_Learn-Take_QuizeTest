@@ -1,24 +1,58 @@
 <template>
-    <div class="home">
-        <h1 class="text-3xl font-bold underline">Welcome to the Home Page</h1>
-        <router-link to="/test-form" class="text-blue-500 hover:underline">Go to Test Form</router-link>
+    <div>
+        <h1 class="text-3xl font-bold text-center mb-6 m-4">Welcome to the Admin Page</h1>
+        <div class=" flex grid grid-cols-1 p-4 m-4 ">
 
+            <!-- Button to send jsonData to backend (Important / Emphasized) -->
+            <button
+                @click="sendDataToBackend"
+                class="mt-4 ml-4 inline-flex items-center gap-2 px-5 py-3 bg-red-600 text-white font-semibold text-lg rounded-lg shadow-lg
+             hover:bg-red-700 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+                <!-- Optional icon -->
+                <svg class="w-8 h-8" fill="#000000"   version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 0 487.5 487.5" xml:space="preserve">
+<g>
+	<g>
+		<path d="M437,12.3C437,5.5,431.5,0,424.7,0H126.3C84.4,0,50.4,34.1,50.4,75.9v335.7c0,41.9,34.1,75.9,75.9,75.9h298.5
+			c6.8,0,12.3-5.5,12.3-12.3V139.6c0-6.8-5.5-12.3-12.3-12.3H126.3c-28.3,0-51.4-23.1-51.4-51.4S98,24.5,126.3,24.5h298.5
+			C431.5,24.5,437,19,437,12.3z M126.3,151.8h286.2V463H126.3c-28.3,0-51.4-23.1-51.4-51.4V131.7
+			C88.4,144.2,106.5,151.8,126.3,151.8z"/>
+        <path d="M130.5,64.8c-6.8,0-12.3,5.5-12.3,12.3s5.5,12.3,12.3,12.3h280.1c6.8,0,12.3-5.5,12.3-12.3s-5.5-12.3-12.3-12.3H130.5z"/>
+        <path d="M178,397.7c6.3,2.4,13.4-0.7,15.8-7.1l17.9-46.8h62.7c0.5,0,0.9-0.1,1.3-0.1l17.9,46.9c1.9,4.9,6.5,7.9,11.4,7.9
+			c1.5,0,2.9-0.3,4.4-0.8c6.3-2.4,9.5-9.5,7.1-15.8l-54-141.2c-3-7.9-10.4-13-18.8-13c-8.4,0-15.8,5.1-18.8,13l-54,141.2
+			C168.5,388.2,171.7,395.2,178,397.7z M243.7,260l22.7,59.3h-45.3L243.7,260z"/>
+	</g>
+</g>
+</svg>
+                <span>Send Data Units JSON data to Backend</span>
+            </button>
 
-        <!-- Button to send jsonData to backend -->
-        <button
-            @click="sendDataToBackend"
-            class="mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
-            Send Data to Backend
-        </button>
+            <!-- Another important button -->
+            <button
+                @click="insertImagesIntoDb"
+                class="mt-4 ml-4 inline-flex items-center gap-2 px-5 py-3 bg-red-600 text-white font-semibold text-lg rounded-lg shadow-lg
+             hover:bg-red-700 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+                <!-- Optional icon -->
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.2639 15.9375L12.5958 14.2834C11.7909 13.4851 11.3884 13.086 10.9266 12.9401C10.5204 12.8118 10.0838 12.8165 9.68048 12.9536C9.22188 13.1095 8.82814 13.5172 8.04068 14.3326L4.04409 18.2801M14.2639 15.9375L14.6053 15.599C15.4112 14.7998 15.8141 14.4002 16.2765 14.2543C16.6831 14.126 17.12 14.1311 17.5236 14.2687C17.9824 14.4251 18.3761 14.8339 19.1634 15.6514L20 16.4934M14.2639 15.9375L18.275 19.9565M18.275 19.9565C17.9176 20 17.4543 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4.12796 18.7313 4.07512 18.5321 4.04409 18.2801M18.275 19.9565C18.5293 19.9256 18.7301 19.8727 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V16.4934M4.04409 18.2801C4 17.9221 4 17.4575 4 16.8V7.2C4 6.0799 4 5.51984 4.21799 5.09202C4.40973 4.71569 4.71569 4.40973 5.09202 4.21799C5.51984 4 6.07989 4 7.2 4H16.8C17.9201 4 18.4802 4 18.908 4.21799C19.2843 4.40973 19.5903 4.71569 19.782 5.09202C20 5.51984 20 6.0799 20 7.2V16.4934M17 8.99989C17 10.1045 16.1046 10.9999 15 10.9999C13.8954 10.9999 13 10.1045 13 8.99989C13 7.89532 13.8954 6.99989 15 6.99989C16.1046 6.99989 17 7.89532 17 8.99989Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Send Data Images JSON data to Backend</span>
+            </button>
+
+           <InsertTest />
+        </div>
+
     </div>
 </template>
+
 
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
-
-// Sample JSON data
+import apiClient from '../../api/apiClient.js';
+import InsertTest from "@/components/main/insert/InsertTest.vue";
 const jsonData = ref([
         {
             "unit":1,
@@ -3157,12 +3191,43 @@ const jsonData = ref([
 // Function to send JSON data to the backend
 const sendDataToBackend = async () => {
     try {
-        const response = await axios.post('http://localhost:8000/api/units', { units: jsonData.value });
+        const response = await apiClient.post('http://localhost:8000/api/units', { units: jsonData.value });
         console.log('Success:', response.data);
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
     }
 };
+
+
+const insertImagesIntoDb = async () => {
+    try {
+        // If your images live in a separate local JSON file, fetch it:
+        const imagesResponse = await fetch('/images.json');
+        const imagesData = await imagesResponse.json();
+
+        // Then post them using the same apiClient
+        const response = await apiClient.post('/images/bulk', imagesData);
+        console.log('Insertion result:', response.data);
+    } catch (error) {
+        console.error('Error inserting images:', error.response ? error.response.data : error.message);
+    }
+};
+
+const insertQuizDataIntoDb = async () => {
+    try {
+        // If your images live in a separate local JSON file, fetch it:
+        const testResponse = await fetch('/testData.json');
+        const testData = await testResponse.json();
+
+        // Then post them using the same apiClient
+        const response = await apiClient.post('/quiz', testData);
+        console.log('Insertion result:', response.data);
+    } catch (error) {
+        console.error('Error inserting tests:', error.response ? error.response.data : error.message);
+    }
+};
+
+
 </script>
 
 <style scoped>

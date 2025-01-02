@@ -5,7 +5,7 @@
     <div id="main" class="flex-grow p-4">
       <section class="post bg-white shadow-md rounded-lg p-6 mb-4" v-for="section in data.questions" :key="section.id">
         <header class="major mb-4">
-          <h3 class="text-xl font-bold text-gray-800">{{ section.title }}</h3>
+          <h3 class="text-xl font-bold text-gray-800">{{ section.title }}</h3> sss
         </header>
 
         <form @submit.prevent="handleSubmit(section.id)">
