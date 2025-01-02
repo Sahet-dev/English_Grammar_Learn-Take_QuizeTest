@@ -11,6 +11,7 @@ import UnitShowFromDB from "@/components/main/UnitShowFromDB.vue";
 import UnitUpdate from "@/components/main/UnitUpdate.vue";
 import UpdateQuiz from "@/components/main/UpdateQuiz.vue";
 import UserManagement from "@/components/main/UserManagement.vue";
+import VisibilityUnitsList from "@/components/main/VisibilityUnitsList.vue";
 
 const routes = [
   {
@@ -62,6 +63,13 @@ const routes = [
         name: 'UnitEdit',
         component: UnitUpdate,  // This should be your "Edit Unit" component
     },
+    {
+        path: '/vision',
+        name: 'UnitsList',
+        component: VisibilityUnitsList,
+    }
+
+
 ]
 
 const router = createRouter({

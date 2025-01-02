@@ -17,6 +17,15 @@
                 </div>
             </div>
 
+            <!-- Visibility Toggle -->
+            <div class="p-4 bg-gray-100 rounded-md shadow-md mb-6">
+                <label for="visibility" class="text-lg font-medium text-gray-800">Visibility: </label>
+                <select v-model="unit.visibility" class="ml-4 p-2 border rounded-md">
+                    <option value="visible">Visible</option>
+                    <option value="hidden">Hidden</option>
+                </select>
+            </div>
+
             <!-- Content Container -->
             <div class="p-8">
                 <div
@@ -112,6 +121,7 @@ import { ClassicEditor, Essentials, Paragraph, Bold, Italic, Mention,
 import { Ckeditor } from '@ckeditor/ckeditor5-vue';
 
 import 'ckeditor5/ckeditor5.css';
+import apiClient from "@/api/apiClient.js";
 
 
 const config = computed( () => {
@@ -150,7 +160,14 @@ const loadData = async () => {
 
 const saveUnit = async () => {
     try {
-        const response = await axios.put(`http://localhost:8000/api/units/${route.params.id}`, unit.value);
+        // Include visibility in the payload along with the unit and details
+        const unitData = {
+            unit: unit.value.unit,
+            details: unit.value.details,
+            visibility: unit.value.visibility  // Add the visibility field to the data being updated
+        };
+
+        const response = await apiClient.put(`http://localhost:8000/api/units/${route.params.id}`, unitData);
         console.log('Unit updated successfully:', response.data);
         alert('Unit updated successfully!');
     } catch (error) {
@@ -158,6 +175,7 @@ const saveUnit = async () => {
         alert('Failed to update unit.');
     }
 };
+
 
 onMounted(() => {
     loadData();
