@@ -62,8 +62,8 @@ const login = async () => {
             email: email.value,
             password: password.value,
         });
-
-        authStore.login(response.data.token);
+        console.log(response.data);
+        authStore.login(response.data.token,  response.data.user.role);
 
         await router.push("/");
 

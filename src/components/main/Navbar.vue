@@ -42,6 +42,13 @@
                         >
                             Logout
                         </button>
+                        <button
+                            v-if="isAdmin"
+                            @click="goToManage"
+                            class="text-white hover:text-yellow-300 transition duration-300 ease-in-out"
+                        >
+                            Manage Users
+                        </button>
                     </template>
                 </div>
 
@@ -94,6 +101,13 @@
                     >
                         Logout
                     </button>
+
+                    <button  v-if="isAdmin"
+                        @click="goToManage"
+                        class="block text-white py-2 px-4 hover:bg-indigo-700 transition duration-200 ease-in-out"
+                    >
+                        UserManagement
+                    </button>
                 </template>
             </div>
         </nav>
@@ -109,11 +123,17 @@ const router = useRouter();
 const authStore = useAuthStore();
 const mobileMenuOpen = ref(false);
 
+const isAdmin = computed(() => authStore.role === 'admin');
+
+
 // Computed property to check if the user is authenticated
 const isAuthenticated = computed(() => {
     return authStore.token !== null;
 });
 
+const goToManage = () => {
+    router.push('/manage');
+};
 // Toggle mobile menu
 function toggleMobileMenu() {
     mobileMenuOpen.value = !mobileMenuOpen.value;

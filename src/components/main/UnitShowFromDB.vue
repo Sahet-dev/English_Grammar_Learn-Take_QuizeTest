@@ -75,7 +75,7 @@
                 </div>
 
                 <!-- Update Button -->
-                <template v-if="isAuthenticated">
+                <template v-if="isAdmin">
                     <div class="mt-8 text-center flex grid grid-cols-1 gap-4 items-center">
                     <router-link
                         :to="`/unit/${unit.unit}/edit`"
@@ -119,13 +119,14 @@ import { useRoute } from 'vue-router';
 import { useUnitStore } from '@/api/useUnitStore.js'
 import {useAuthStore} from "@/helpers/authStore.js";
 
+
+const authStore = useAuthStore();
+const isAdmin = authStore.role === 'admin';
+console.log(isAdmin)
 const route = useRoute()
 const unitStore = useUnitStore()
-const authStore = useAuthStore();
 
-const isAuthenticated = computed(() => {
-    return authStore.token !== null;
-});
+
 // On mount, call the store to fetch the single unit by ID
 onMounted(() => {
     unitStore.fetchUnitById(route.params.id)

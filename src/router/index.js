@@ -10,6 +10,7 @@ import FromDBUnitList from "@/components/main/FromDBUnitList.vue";
 import UnitShowFromDB from "@/components/main/UnitShowFromDB.vue";
 import UnitUpdate from "@/components/main/UnitUpdate.vue";
 import UpdateQuiz from "@/components/main/UpdateQuiz.vue";
+import UserManagement from "@/components/main/UserManagement.vue";
 
 const routes = [
   {
@@ -50,6 +51,11 @@ const routes = [
     path: '/insert',
     name: 'Insert',
     component:  Home,
+  },
+    {
+    path: '/manage',
+    name: 'UserManagement',
+    component:  UserManagement,
   },
     {
         path: '/unit/:id/edit',
