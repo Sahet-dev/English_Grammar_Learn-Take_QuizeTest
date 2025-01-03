@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg" v-if="isAdmin">
         <h2 class="text-2xl font-semibold text-gray-800 mb-6">Update Quiz</h2>
 
         <form @submit.prevent="submitQuizUpdate" class="space-y-4">
@@ -93,14 +93,22 @@
             {{ errorMessage }}
         </div>
     </div>
+    <div v-else class="min-h-screen flex items-center justify-center bg-gray-50">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-red-600 mb-2">Access Denied</h1>
+            <p class="text-gray-600">This area is restricted to administrators only.</p>
+        </div>
+    </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import apiClient from '@/api/apiClient.js'; // Replace with your apiClient
+import { useAuthStore } from "@/helpers/authStore";
 
-// State variables
+const authStore = useAuthStore();
+const isAdmin = authStore.role === 'admin';
 const quizData = ref({
     title: '',
     quiz_details: [],

@@ -3191,7 +3191,7 @@ const jsonData = ref([
 // Function to send JSON data to the backend
 const sendDataToBackend = async () => {
     try {
-        const response = await apiClient.post('http://localhost:8000/api/units', { units: jsonData.value });
+        const response = await apiClient.post('/units', { units: jsonData.value });
         console.log('Success:', response.data);
     } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);

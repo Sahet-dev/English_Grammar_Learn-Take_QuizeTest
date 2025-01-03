@@ -11,10 +11,11 @@
                             class="group relative bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
                             @click="goToUnit(unit.unit)"
                         >
+<!--                            goToUnit(unit.unit) MUST USE UNIT NUMBER NOTTTTT UNIT id !!! -->
                             <!-- Image Container -->
-                            <div v-if="unit.images && unit.images.length > 0" class="aspect-w-16 aspect-h-9 overflow-hidden">
+                            <div v-if="unit.images?.length" class="aspect-w-16 aspect-h-9 overflow-hidden">
                                 <img
-                                    :src="`http://localhost:8000/${unit.images[0].url}`"
+                                    :src="`http://localhost:8000/${unit.images[0]?.url}`"
                                     alt="Unit Image"
                                     class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
                                 />
@@ -39,6 +40,25 @@
                                     </svg>
                                 </div>
                             </div>
+
+                        </div>
+                        <!-- Pagination Controls -->
+                        <div class="flex justify-between items-center mt-8">
+                            <button
+                                class="px-4 py-2 bg-blue-500 text-white rounded"
+                                :disabled="currentPage === 1"
+                                @click="loadUnits(currentPage - 1)"
+                            >
+                                Previous
+                            </button>
+                            <span>Page {{ currentPage }} of {{ totalPages }}</span>
+                            <button
+                                class="px-4 py-2 bg-blue-500 text-white rounded"
+                                :disabled="currentPage === totalPages"
+                                @click="loadUnits(currentPage + 1)"
+                            >
+                                Next
+                            </button>
                         </div>
                     </div>
 
@@ -54,23 +74,45 @@
 </template>
 
 <script setup>
-import { onMounted, computed } from 'vue'
-import { useRouter } from 'vue-router'
-import {useUnitStore} from '@/api/useUnitStore.js'
+import {onMounted, computed, ref} from 'vue'
+import apiClient from '@/api/apiClient.js';
+import router from "@/router/index.js";
 
-const unitStore = useUnitStore()
+const units = ref([]);
+const loading = ref(false);
+const error = ref(null);
+const currentPage = ref(1);
+const totalPages = ref(1);
 
+const loadUnits = async (page = 1) => {
+    loading.value = true;
+    error.value = null;
+
+    try {
+        const response = await apiClient.get(`/units?page=${page}`);
+        console.log('API Response:', response.data);
+        const { data, meta } = response.data;
+
+        units.value = data || [];  // Set units data
+        currentPage.value = meta.current_page;
+        totalPages.value = meta.last_page;
+
+    } catch (err) {
+        error.value = err?.response?.data || err.message;
+        console.error('Error fetching units:', error.value);
+    } finally {
+        loading.value = false;
+    }
+};
+
+// Automatically fetch data when the component is mounted
 onMounted(() => {
-    unitStore.loadData()
-})
-
-const router = useRouter()
-
-const units = computed(() => unitStore.units)
+    loadUnits();
+});
 
 const goToUnit = (unitId) => {
-    router.push({name: 'UnitShowFromDB', params: {id: unitId}})
-}
+    router.push({ name: 'UnitShowFromDB', params: { id: unitId } });
+};
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+    <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8" v-if="isAdmin">
         <div
             v-if="unit"
             class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-in-out"
@@ -108,6 +108,12 @@
             </div>
         </div>
     </div>
+    <div v-else class="min-h-screen flex items-center justify-center bg-gray-50">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-red-600 mb-2">Access Denied</h1>
+            <p class="text-gray-600">This area is restricted to administrators only.</p>
+        </div>
+    </div>
 </template>
 
 
@@ -122,7 +128,10 @@ import { Ckeditor } from '@ckeditor/ckeditor5-vue';
 
 import 'ckeditor5/ckeditor5.css';
 import apiClient from "@/api/apiClient.js";
+import { useAuthStore } from "@/helpers/authStore";
 
+const authStore = useAuthStore();
+const isAdmin = authStore.role === 'admin';
 
 const config = computed( () => {
     return {
@@ -147,7 +156,7 @@ const unit = ref(null);
 
 const loadData = async () => {
     try {
-        const response = await axios.get(`http://localhost:8000/api/units/${route.params.id}`);
+        const response = await apiClient.get(`/units/${route.params.id}`);
         unit.value = response.data;
 
         unit.value.details.forEach(detail => {
@@ -167,7 +176,7 @@ const saveUnit = async () => {
             visibility: unit.value.visibility  // Add the visibility field to the data being updated
         };
 
-        const response = await apiClient.put(`http://localhost:8000/api/units/${route.params.id}`, unitData);
+        const response = await apiClient.put(`/units/${route.params.id}`, unitData);
         console.log('Unit updated successfully:', response.data);
         alert('Unit updated successfully!');
     } catch (error) {
@@ -183,5 +192,4 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Add your custom styles here */
 </style>

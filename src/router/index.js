@@ -1,4 +1,3 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../components/main/HomePage.vue'
 import UnitList from "@/components/main/UnitList.vue";
@@ -12,6 +11,7 @@ import UnitUpdate from "@/components/main/UnitUpdate.vue";
 import UpdateQuiz from "@/components/main/UpdateQuiz.vue";
 import UserManagement from "@/components/main/UserManagement.vue";
 import VisibilityUnitsList from "@/components/main/VisibilityUnitsList.vue";
+import AdminPage from "@/components/main/AdminPage.vue";
 
 const routes = [
   {
@@ -33,11 +33,12 @@ const routes = [
     props: true,
   },
     {
-    path: '/db/unit/:id',
-    name: 'UnitShowFromDB',
-    component: UnitShowFromDB,
-    props: true,
-  },
+        path: '/db/unit/:id',
+        name: 'UnitShowFromDB',
+        component: UnitShowFromDB,
+        props: true,
+    }
+,
     {
         path: '/quiz/:unitId',
         name: 'UpdateQuiz',
@@ -59,9 +60,14 @@ const routes = [
     component:  UserManagement,
   },
     {
+    path: '/admin',
+    name: 'Admin',
+    component:  AdminPage,
+  },
+    {
         path: '/unit/:id/edit',
         name: 'UnitEdit',
-        component: UnitUpdate,  // This should be your "Edit Unit" component
+        component: UnitUpdate,
     },
     {
         path: '/vision',

@@ -7,33 +7,51 @@ export const useUnitStore = defineStore('unitStore', {
         unitsCache: {},
         currentUnitId: null,
         loading: false,
-        error: null
+        error: null,
+        currentPage: 1,
+        totalPages: 1,
+        totalItems: 0,
     }),
 
     getters: {
         currentUnit(state) {
-            if (!state.currentUnitId) return null
-            return state.unitsCache[state.currentUnitId] || null
+            try {
+                if (!state.currentUnitId) return null
+                return state.unitsCache[state.currentUnitId] || null
+            } catch (err) {
+                console.error("Error in getter currentUnit:", err)
+                return null
+            }
         },
 
         currentUnitQuiz(state) {
-            const unit = state.unitsCache[state.currentUnitId]
-            return unit ? unit.quiz_details : null
+            const unit = this.currentUnit
+            if (unit && unit.quiz_details) {
+                return unit.quiz_details
+            }
+            return []  // Return empty array if quiz_details is not available
         }
     },
 
     actions: {
-        async loadData() {
-            if (this.units.length > 0) {
+        async loadData(page = 1) {
+            if (this.unitsCache[page]) {
+                this.units = this.unitsCache[page].data || []
+                this.currentPage = page
                 return
             }
-
             this.loading = true
             this.error = null
 
             try {
-                const response = await apiClient.get('/units')
-                this.units = response.data
+                const response = await apiClient.get(`/units?page=${page}`)
+                const { data, meta } = response.data
+
+                this.units = data
+                this.currentPage = meta.current_page
+                this.totalPages = meta.last_page
+                this.totalItems = meta.total
+                this.unitsCache[page] = response.data
             } catch (err) {
                 this.error = err?.response?.data || err.message
                 console.error('Error fetching units:', this.error)
@@ -55,7 +73,6 @@ export const useUnitStore = defineStore('unitStore', {
             try {
                 const response = await apiClient.get(`/units/${unitId}`)
                 this.unitsCache[unitId] = response.data
-                // Mark the “active” one
                 this.currentUnitId = unitId
             } catch (err) {
                 this.error = err?.response?.data || err.message

@@ -11,12 +11,7 @@
 
                 <!-- Navbar Links -->
                 <div class="hidden md:flex items-center space-x-6 pr-4">
-                    <router-link
-                        to="/list"
-                        class="text-white hover:text-yellow-300 transition duration-300 ease-in-out"
-                    >
-                        Local List
-                    </router-link>
+
 
                     <!-- Conditionally Render Login/Register or Logout based on authentication status -->
                     <template v-if="!isAuthenticated">
@@ -70,12 +65,7 @@
                 >
                     Home
                 </router-link>
-                <router-link
-                    to="/list"
-                    class="block text-white py-2 px-4 hover:bg-indigo-700 transition duration-200 ease-in-out"
-                >
-                    List
-                </router-link>
+
 
                 <!-- Conditionally Render Login/Register or Logout for mobile -->
                 <template v-if="!isAuthenticated">
@@ -146,5 +136,4 @@ const logoutUser = () => {
 </script>
 
 <style scoped>
-/* Custom styles (if needed) */
 </style>

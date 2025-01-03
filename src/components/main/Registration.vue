@@ -111,7 +111,7 @@ async function registerUser() {
         errorMessage.value = '';
         successMessage.value = '';
 
-        const response = await fetch('http://localhost:8000/api/register', {
+        const response = await fetch('https://english-backend.sahet-dev.com/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

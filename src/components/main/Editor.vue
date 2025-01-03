@@ -126,6 +126,7 @@ import { ClassicEditor, Essentials, Paragraph, Bold, Italic, Mention,
 import { Ckeditor } from '@ckeditor/ckeditor5-vue';
 
 import 'ckeditor5/ckeditor5.css';
+import apiClient from "@/api/apiClient.js";
 
 
 const config = computed( () => {
@@ -151,7 +152,7 @@ const unit = ref(null);
 
 const loadData = async () => {
     try {
-        const response = await axios.get(`http://localhost:8000/api/units/${route.params.id}`);
+        const response = await apiClient.get(`/units/${route.params.id}`);
         unit.value = response.data;
 
         unit.value.details.forEach(detail => {
@@ -164,7 +165,7 @@ const loadData = async () => {
 
 const saveUnit = async () => {
     try {
-        const response = await axios.put(`http://localhost:8000/api/units/${route.params.id}`, unit.value);
+        const response = await apiClient.put(`/units/${route.params.id}`, unit.value);
         console.log('Unit updated successfully:', response.data);
         alert('Unit updated successfully!');
     } catch (error) {
