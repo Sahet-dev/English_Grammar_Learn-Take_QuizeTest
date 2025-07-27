@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-vue": "^7.3.0",
     "axios": "^1.7.9",
     "ckeditor5": "^44.1.0",
     "crypto-js": "^4.2.0",
