@@ -95,6 +95,7 @@
 </template>
 <script setup>
 import { ref } from 'vue';
+import apiClient from "@/api/apiClient.js";
 
 const form = ref({
     name: '',
@@ -106,34 +107,24 @@ const form = ref({
 const errorMessage = ref('');
 const successMessage = ref('');
 
+
 async function registerUser() {
     try {
         errorMessage.value = '';
         successMessage.value = '';
 
-        const response = await fetch('https://english-backend.sahet-dev.com/api/register', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(form.value)
-        });
+        // Use apiClient instead of fetch
+        const response = await apiClient.post('/register', form.value);
 
-        if (!response.ok) {
-            // If validation or server error
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Unknown error');
-        }
-
-        const data = await response.json();
+        const data = response.data;
 
         successMessage.value = 'Registration successful!';
         console.log('Received token:', data.access_token);
 
-        // Optionally store token in localStorage if using token-based auth
-        // localStorage.setItem('auth_token', data.access_token);
+        // Store token if needed
+        // localStorage.setItem('token', data.access_token);
 
-        // Clear the form
+        // Clear form
         form.value = {
             name: '',
             email: '',
@@ -141,7 +132,12 @@ async function registerUser() {
             password_confirmation: ''
         };
     } catch (error) {
-        errorMessage.value = error.message;
+        // Handle validation errors or other issues
+        if (error.response && error.response.data) {
+            errorMessage.value = error.response.data.message || 'Registration failed';
+        } else {
+            errorMessage.value = error.message || 'An unknown error occurred';
+        }
     }
 }
 </script>

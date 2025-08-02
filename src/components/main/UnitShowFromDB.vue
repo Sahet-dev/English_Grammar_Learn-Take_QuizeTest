@@ -1,31 +1,60 @@
 <template>
     <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+
+
         <div
             v-if="unit"
             class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-in-out"
         >
+
             <!-- Unit Header -->
             <div class="relative overflow-hidden bg-blue-600 p-8">
+                <!-- Existing Gradient -->
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 opacity-90"></div>
                 <div class="relative">
-          <span class="inline-block px-3 py-1 text-sm font-medium text-blue-100 bg-blue-500 bg-opacity-50 rounded-full">
+                    <!-- Learning Material Badge -->
+                    <span class="inline-block px-3 py-1 text-sm font-medium text-blue-100 bg-blue-500 bg-opacity-50 rounded-full">
             Learning Material
-          </span>
+        </span>
+
+                    <!-- Title -->
                     <h2 class="mt-4 text-3xl font-bold text-white">
                         Unit {{ unit.unit }}
+
                     </h2>
+
+<!--                     Inline Video -->
+                    <div v-if="unit.video_url" class="mt-6 relative w-full" style="padding-top: 56.25%;">
+                        <video controls class="w-full h-auto rounded-lg shadow-lg">
+                            <source :src="unit.video_url"   />
+
+                        </video>
+
+                    </div>
+                    <div v-else>
+                        <span>Video is not available</span>
+                    </div>
+
+
+
                 </div>
             </div>
 
+
             <!-- Content Container -->
             <div class="p-8">
+
+
                 <div
                     v-for="(detail, index) in unit.details"
                     :key="detail.id"
                     class="mb-12 last:mb-8 transition-all duration-300 ease-in-out hover:translate-x-2"
                 >
+<!--                    <pre>{{unit.video_url}}</pre>-->
+
                     <!-- Section Title -->
                     <div class="flex items-center space-x-3 mb-4">
+
             <span class="flex items-center justify-center w-8 h-8 text-sm font-semibold text-blue-600 bg-blue-50 rounded-full">
               {{ index + 1 }}
             </span>
@@ -113,26 +142,38 @@
 </template>
 
 <script setup>
-import { onMounted, computed } from 'vue';
+import {onMounted, computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 import { useUnitStore } from '@/api/useUnitStore.js'
 import {useAuthStore} from "@/helpers/authStore.js";
 
 
+
+
+
+
+
+
+
+
 const authStore = useAuthStore();
 const isAdmin = authStore.role === 'admin';
-console.log(isAdmin)
 const route = useRoute()
 const unitStore = useUnitStore()
 
 
-// On mount, call the store to fetch the single unit by ID
-onMounted(() => {
-    unitStore.fetchUnitById(route.params.id)
-})
+
 
 const unit = computed(() => unitStore.currentUnit)
+
+onMounted(async () => {
+    await unitStore.fetchUnitById(route.params.id);
+});
+
+
+
+
 </script>
 
 <style scoped>
