@@ -24,16 +24,22 @@
                     </h2>
 
 <!--                     Inline Video -->
-                    <div v-if="unit.video_url" class="mt-6 relative w-full" style="padding-top: 56.25%;">
-                        <video controls class="w-full h-auto rounded-lg shadow-lg">
-                            <source :src="unit.video_url"   />
+<!--                    <div v-if="unit.video_url" class="mt-6 relative w-full" style="padding-top: 56.25%;">-->
+<!--                        <video controls class="w-full h-auto rounded-lg shadow-lg">-->
+<!--                            <source :src="unit.video_url"   />-->
 
+<!--                        </video>-->
+
+<!--                    </div>-->
+<!--                    <div v-else>-->
+<!--                        <span>Video is not available</span>-->
+<!--                    </div>-->
+                        <video v-if="signedVideoUrl" controls class="w-full h-auto rounded-lg shadow-lg">
+                            <source :src="signedVideoUrl" />
                         </video>
-
-                    </div>
-                    <div v-else>
-                        <span>Video is not available</span>
-                    </div>
+                        <div v-else>
+                            <span>Video is not available</span>
+                        </div>
 
 
 
@@ -142,11 +148,12 @@
 </template>
 
 <script setup>
-import {onMounted, computed } from 'vue';
+import {onMounted, computed, ref} from 'vue';
 import { useRoute } from 'vue-router';
 
 import { useUnitStore } from '@/api/useUnitStore.js'
 import {useAuthStore} from "@/helpers/authStore.js";
+import apiClient from "@/api/apiClient.js";
 
 
 
@@ -162,13 +169,19 @@ const isAdmin = authStore.role === 'admin';
 const route = useRoute()
 const unitStore = useUnitStore()
 
-
+const signedVideoUrl = ref('');
 
 
 const unit = computed(() => unitStore.currentUnit)
 
 onMounted(async () => {
     await unitStore.fetchUnitById(route.params.id);
+
+    if (unit.value) {
+        const response = await apiClient.get(`/video-url/${route.params.id}`);
+        signedVideoUrl.value = response.data.presigned_url;
+        console.log(signedVideoUrl.value); // This will now show the correct signed URL
+    }
 });
 
 
