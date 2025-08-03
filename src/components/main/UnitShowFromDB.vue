@@ -1,6 +1,8 @@
 <template>
     <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8">
-
+<pre>
+                            {{`${cdnBaseUrl}/${videoPath}`}}
+                        </pre>
 
         <div
             v-if="unit"
@@ -23,21 +25,13 @@
 
                     </h2>
 
-<!--                     Inline Video -->
-<!--                    <div v-if="unit.video_url" class="mt-6 relative w-full" style="padding-top: 56.25%;">-->
-<!--                        <video controls class="w-full h-auto rounded-lg shadow-lg">-->
-<!--                            <source :src="unit.video_url"   />-->
+                    <video v-if="videoPath" controls class="w-full h-auto rounded-lg shadow-lg">
+                        <source :src="`${cdnBaseUrl}/${videoPath}`" type="video/mp4">
 
-<!--                        </video>-->
+                    </video>
 
-<!--                    </div>-->
-<!--                    <div v-else>-->
-<!--                        <span>Video is not available</span>-->
-<!--                    </div>-->
-                        <video v-if="signedVideoUrl" controls class="w-full h-auto rounded-lg shadow-lg">
-                            <source :src="signedVideoUrl" />
-                        </video>
-                        <div v-else>
+
+                    <div v-else>
                             <span>Video is not available</span>
                         </div>
 
@@ -169,8 +163,11 @@ const isAdmin = authStore.role === 'admin';
 const route = useRoute()
 const unitStore = useUnitStore()
 
-const signedVideoUrl = ref('');
 
+const videoPath = ref('');
+const cdnBaseUrl = import.meta.env.VITE_CDN_BASE_URL;
+
+console.log(cdnBaseUrl)
 
 const unit = computed(() => unitStore.currentUnit)
 
@@ -179,8 +176,7 @@ onMounted(async () => {
 
     if (unit.value) {
         const response = await apiClient.get(`/video-url/${route.params.id}`);
-        signedVideoUrl.value = response.data.presigned_url;
-        console.log(signedVideoUrl.value); // This will now show the correct signed URL
+        videoPath.value = response.data.path;
     }
 });
 

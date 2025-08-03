@@ -15,6 +15,7 @@ coverage
 *.local
 public/testData.json
 public/units.json
+.env
 
 /cypress/videos/
 /cypress/screenshots/
